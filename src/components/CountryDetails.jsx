@@ -41,12 +41,18 @@ export default function CountryDetails() {
       <h1> country details </h1>
        <img src={detail.flags.png} alt="" /> 
       <h1> Capital: {detail.capital}</h1>
-      <h1> Name's: {detail.name}</h1>
-      <h1> Boarder: {detail.borders}</h1>
-      <h1> Area: {detail.area}</h1>
 
-      
+      <ul> Area: {detail.area} km</ul>     
 
+      <ul> Boarder:           
+          {detail.borders.map((elem)=> {
+          return (
+          <ul> 
+           {/* <Link to={`/${elem}`} >{elem}</Link>  */}
+          </ul>
+          );
+     })}
+     </ul>
     </div>
   )
 }
